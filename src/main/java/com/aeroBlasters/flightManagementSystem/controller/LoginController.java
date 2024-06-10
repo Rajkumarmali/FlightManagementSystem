@@ -12,6 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.aeroBlasters.flightManagementSystem.bean.FlightUser;
 import com.aeroBlasters.flightManagementSystem.service.FlightUserService;
 
+// this is for checks
+
 @Controller
 public class LoginController {
 	
