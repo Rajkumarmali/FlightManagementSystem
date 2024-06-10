@@ -29,7 +29,7 @@ public class LoginController {
 		return mv;
 	}
 	
-
+// this is for login page 
 	@GetMapping("/loginpage")
 	public ModelAndView showloginPage() {
 		
