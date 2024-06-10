@@ -20,7 +20,8 @@ public class LoginController {
 	
 	@Autowired
 	private BCryptPasswordEncoder bCrypt;
-	
+
+	// this is for signup 
 	@GetMapping("/register")
 	public ModelAndView showUserRegisterPage() {
 		FlightUser user=new FlightUser();
