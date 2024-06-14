@@ -1,9 +1,49 @@
 package com.aeroBlasters.flightManagementSystem.bean;
 
-public class Airport {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
- public static void main(String[] args) {
-	 System.out.println("Its a new class");
-	 
- }
+@Entity
+public class Airport {
+    @Id
+    private String airportCode;
+    private String airportLocation;
+///today work
+    // Default constructor
+    public Airport() {
+    	super();
+    }
+
+    // Parameterized constructor
+    public Airport(String airportCode, String airportLocation) {
+    	super();
+        this.airportCode = airportCode;
+        this.airportLocation = airportLocation;
+    }
+
+    // Getters and Setters
+    public String getAirportCode() {
+        return airportCode;
+    }
+
+    public void setAirportCode(String airportCode) {
+        this.airportCode = airportCode;
+    }
+
+    public String getAirportLocation() {
+        return airportLocation;
+    }
+
+    public void setAirportLocation(String airportLocation) {
+        this.airportLocation = airportLocation;
+    }
+
+    // toString method
+    @Override
+    public String toString() {
+        return "Airport{" +
+                "airportCode='" + airportCode + '\'' +
+                ", airportLocation='" + airportLocation + '\'' +
+                '}';
+    }
 }
