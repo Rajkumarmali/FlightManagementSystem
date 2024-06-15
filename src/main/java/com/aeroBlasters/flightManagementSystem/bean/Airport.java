@@ -1,3 +1,4 @@
+
 package com.aeroBlasters.flightManagementSystem.bean;
 
 import javax.persistence.Entity;
@@ -8,15 +9,14 @@ public class Airport {
     @Id
     private String airportCode;
     private String airportLocation;
-///today work
+    
+    
+    //today's work
     // Default constructor
-    public Airport() {
-    	super();
-    }
+    public Airport() {}
 
     // Parameterized constructor
     public Airport(String airportCode, String airportLocation) {
-    	super();
         this.airportCode = airportCode;
         this.airportLocation = airportLocation;
     }
