@@ -19,34 +19,49 @@ public class FlightManagementController {
 	@Autowired
 	private AirportDao airportDao;
 	
-//	@GetMapping("/index")
-//	public ModelAndView showIndexPage() {
-//		return new ModelAndView("index");
-//	}
+	@GetMapping("/index")
+	public ModelAndView showIndexPage() {
+		return new ModelAndView("index");
+	}
 	
 	@GetMapping("/airport")
 	public ModelAndView showAirportEntryPage() {
-		return new ModelAndView("AirportAddition", "airport_data", new Airport());
+       Airport airport=new Airport();
+       ModelAndView mv=new ModelAndView("airportEntryPage");
+       mv.addObject("airportRecord",airport);
+       return mv;
 	}
 	
 	@PostMapping("/airport")
-	public ModelAndView saveAirport(@ModelAttribute("airport_data") Airport airport) {
+	public ModelAndView saveAirport(@ModelAttribute("AirportRecord") Airport airport) {
+		String str=airport.getAirportCode().toUpperCase();
+		airport.setAirportCode(str);
 		airportDao.addAirport(airport);
 		return new ModelAndView("index");
 	}
-	 @GetMapping("/airports")
-	    public ModelAndView showAllAirportsPage() {
-	        List<Airport> airports = airportDao.showAllAirports();
-	        return new ModelAndView("airportsList", "airports", airports);
+	@PostMapping("/airport-select")
+	public ModelAndView showSingleAirportPage(@RequestParam("airport-code") String id) {
+		Airport airport=airportDao.findAirportById(id);
+		ModelAndView mv=new ModelAndView("airportShowPage");
+		mv.addObject("airport",airport);
+		return mv;
+	}
+	
+	@GetMapping("/airports")
+	    public ModelAndView showAirportReportPage() {
+	        List<Airport> airportList = airportDao.findAllAirports();
+	        ModelAndView mv=new ModelAndView("airportReportPage");
+	        mv.addObject("airportList",airportList);
+	        return mv;
 	    }
 	
-	@GetMapping("/airport/{id}")
-    public ModelAndView showSingleAirportPage(@PathVariable("id") String id) {
-        Airport airport = airportDao.showAirport(id);
-        if (airport != null) {
-            return new ModelAndView("airportDetail", "airport", airport);
-        } else {
-            return new ModelAndView("error", "message", "Airport not found");
-        }
+	@GetMapping("/airport-select")
+    public ModelAndView showAirportSelectPage() {
+        List<String> codeList = airportDao.findAllAirportCodes();
+        ModelAndView mv=new ModelAndView("airportSelectPage");
+        mv.addObject("codeList",codeList);
+        return mv;
     }
+	
+	
 }

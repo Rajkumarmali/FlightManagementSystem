@@ -30,26 +30,8 @@
 </style>
 </head>
 <body>
-   <div align="center">
-   <h1 style="font-family:ALGERIAN">Welcome To Flight Management System</h1>
-   <br/><br/>
-   </div>
- <br/>
- <div class="navbar">
- <div class ="dropdown">
- <button class="dropbtn">Airport
- <i class="fa fa-caret-down"></i>
- </button>
- <div class="dropdown-content">
- <a href="/airport">Airport Addition</a>
- <a href="/airport-select">Single Airport Information</a>
- <a href="/airports">Airport Reports</a>
- </div>
- </div>
-  <a href="#home">Schedule</a>
-  <a href="#news">Flight</a>
-   <a href="/logout">Logout</a>
- </div>  
-
+    <div>
+        <h1>Welcome to Flight Management System</h1>
+    </div>
 </body>
 </html>
