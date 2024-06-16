@@ -44,10 +44,6 @@ public class LoginController {
 		return new ModelAndView("loginErrorPage");
 	}
 
-	@GetMapping("/index")
-	public ModelAndView showIndexPage() {
-		return new ModelAndView("index");
-	}
 	
 	@PostMapping("/register")
 	public ModelAndView saveUserRegistrationPage(@ModelAttribute("userRecord") FlightUser user) {

@@ -15,7 +15,7 @@
 <h2>
 Airport Code:${airport.airportCode}
 <br/><br/>
-Airport Code:${airport.Location}
+Airport Code:${airport.airportLocation}
 <br/><br/>
 </h2>
 </body>
