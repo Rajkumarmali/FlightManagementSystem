@@ -7,6 +7,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+body {
+  background-color: skyblue;
+}
+</style>
 </head>
 <body>
 <div align="center" >

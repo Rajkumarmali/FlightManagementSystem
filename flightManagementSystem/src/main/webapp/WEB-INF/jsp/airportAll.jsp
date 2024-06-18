@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+body {
+  background-color: skyblue;
+}
+</style>
 </head>
 <body>
 <div align ="center">
@@ -25,6 +30,8 @@
             </tr>
 </c:forEach>
 </table>
+<br><br><br>
+<a href="i">Back to Home</a>
 </div>
 </body>
 </html>

@@ -20,8 +20,7 @@ public class FlightManagementController {
 	
 	@GetMapping("/i")
 	public ModelAndView showIndexPage() {
-	
-		return new ModelAndView("new");
+		return new ModelAndView("index_2");
 	}
 	
 	@GetMapping("/airport")
@@ -38,9 +37,12 @@ public class FlightManagementController {
 	public ModelAndView saveAirport(@ModelAttribute("airport_data") Airport airport) {
 		String str =airport .getAirportCode().toUpperCase();		
 		airport.setAirportCode(str);
+		String stg =airport .getAirportLocation().toUpperCase();		
+		airport.setAirportLocation(stg);
+		
 		airportDao.addAirport(airport);
 		//----------------------------------------
-		return new ModelAndView("airportAdd");
+		return new ModelAndView("index_2");
 		//----------------------------------------
 	}
 	

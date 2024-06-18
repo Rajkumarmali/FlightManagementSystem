@@ -5,11 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Airport Details</title>
+
+</style>
 </head>
 <body>
- <h2>Airport Details</h2>
+<div align ="center">
+ <i><h1>Airport Details</h1></i>
     <table>
         <tr>
+        <h1>
             <td>Airport Code:</td>
             <td>${airport.airportCode}</td>
         </tr>
@@ -17,8 +21,9 @@
             <td>Airport Location:</td>
             <td>${airport.airportLocation}</td>
         </tr>
+        </h1>
     </table>
     <br/><br/>
-   <a href="index">Back to Home</a>
+   <a href="i">Back to Home</a>
 </body>
 </html>
