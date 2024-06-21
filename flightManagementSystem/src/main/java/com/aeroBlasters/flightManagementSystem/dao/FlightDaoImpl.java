@@ -1,5 +1,5 @@
 package com.aeroBlasters.flightManagementSystem.dao;
 
-public interface ScheduleRepository {
+public class FlightDaoImpl {
 
 }

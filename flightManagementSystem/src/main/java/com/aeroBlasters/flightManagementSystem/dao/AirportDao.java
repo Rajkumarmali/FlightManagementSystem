@@ -8,4 +8,6 @@ public interface AirportDao {
    public List<Airport> showAllAirports();
    public Airport showAirport(String id);
    public List<String> findAllAirportCodes();
+   public String findAirportCodeByLocation(String airportLocation);
 }
+//AirportRepository.findAirportCodeByLocation(String airportLocation) 

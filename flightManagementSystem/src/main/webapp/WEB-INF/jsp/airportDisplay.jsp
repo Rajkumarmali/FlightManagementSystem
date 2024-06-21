@@ -5,8 +5,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Airport Details</title>
-
+<style>
+body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.shutterstock.com/image-vector/vector-3d-illustration-airplane-clouds-600nw-2143367099.jpg'); /* Path to your background image */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            height: 100vh; /* Ensure body takes full height */
+            margin: 0; /* Remove default margin */
+        }
 </style>
+
 </head>
 <body>
 <div align ="center">

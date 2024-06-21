@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import com.aeroBlasters.flightManagementSystem.bean.Airport;
 import com.aeroBlasters.flightManagementSystem.dao.AirportDao;
+
 @Repository
 @Service
-
 public class AirportDaoImpl implements AirportDao {
     @Autowired
     private AirportRepository repository;
@@ -35,4 +35,15 @@ public class AirportDaoImpl implements AirportDao {
 			// TODO Auto-generated method stub
 			return repository.findAllAirportCodes();
 	    }
+
+	@Override
+	public String findAirportCodeByLocation(String airportLocation) {
+		// TODO Auto-generated method stub
+		return repository.findAirportCodeByLocation(airportLocation);
+	}
+ 
+	
+		//return repository.findAirportCodeByLocation(sourceAirportLocation);
+	
 }
+//AirportRepository.findAirportCodeByLocation(String airportLocation) 

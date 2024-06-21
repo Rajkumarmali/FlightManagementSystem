@@ -1,45 +1,104 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to Flight Management System</title>
-<style>
-  .logout-box {
-    width: 20%;
-    text-align: center;
-  }
-  .logout-box a {
-    color: white;
-    text-decoration: none;
-  }
-</style>
+
+    <title>Flight Management System</title>
+    <style>
+    
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.shutterstock.com/image-vector/vector-3d-illustration-airplane-clouds-600nw-2143367099.jpg'); /* Path to your background image */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            height: 100vh; /* Ensure body takes full height */
+            margin: 0; /* Remove default margin */
+        }
+        .navbar {
+            display: flex;
+            background-color: #4602FB;
+            padding: 20px;
+        }
+        .navbar a {
+            color: white;
+            padding: 20px 30px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgb(0,0,0,0);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+        .title {
+            text-align: center;
+            margin: 20px;
+            font-size: 24px;
+            font-weight: italic;
+        }
+    </style>
 </head>
 <body>
-<table width="100%" border="0" height="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    <td colspan="2" height="100%" bgcolor="#3380FF">
-      <h1 style="color: white; text-align: center;">WELCOME TO FLIGHT MANAGEMENT SYSTEM</h1>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%" height="500" bgcolor="#33E9FF" valign="top">
-      <ul style="list-style-type:none; margin:0; padding:0;">
-        <li><a href="airport">Airport Addition</a></li>
-        <li><a href="airports">Airport Reports</a></li>
-        <li><a href="airport-select">Single Airport Information</a></li>
-      </ul>
-    </td>
-    <td width="80%" height="500" bgcolor="#F0F0F0">
-      <!-- Content goes here -->
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" height="50" bgcolor="#EF0C05" class="logout-box">
-      <a href="loginpage">Logout</a>
-    </td>
-  </tr>
-</table>
+
+<div class="title">
+<u>
+WELCOME TO FLIGHT MANAGEMENT SYSTEM</u>
+</div>
+
+<div class="navbar">
+    <div class="dropdown">
+  
+        <a href="javascript:void(0)" class="dropbtn">Airport</a>
+        <div class="dropdown-content">
+            <a href="/airport">Airport Addition</a>
+            <a href="/airport-select">Single Airport Information</a>
+            <a href="/airports">Airport Reports</a>   
+        </div>
+    </div>
+    
+ <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Route</a>
+        <div class="dropdown-content">
+            <a href="/routeEntryPage">Route Addition</a>
+            <a href="/routes">Routes Report</a>
+        </div>
+    </div>
+
+ <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Flight</a>
+        </div>
+      
+ <div class="dropdown">
+        <a href="/loginpage">Logout</a>
+        </div>  
+    
+</div>
 </body>
 </html>

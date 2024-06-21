@@ -10,18 +10,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import com.aeroBlasters.flightManagementSystem.bean.Airport;
+import com.aeroBlasters.flightManagementSystem.bean.Route;
 import com.aeroBlasters.flightManagementSystem.dao.AirportDao;
+import com.aeroBlasters.flightManagementSystem.dao.RouteDao;
 
 @RestController
-public class FlightManagementController {
+public class AirportController {
+	
+	@Autowired
+	private RouteDao routeDao;
 	
 	@Autowired
 	private AirportDao airportDao;
 	
 	@GetMapping("/i")
-	public ModelAndView showIndexPage() {
+	public ModelAndView showIndePage() {
 		return new ModelAndView("index_2");
 	}
+	
 	
 	@GetMapping("/airport")
 	public ModelAndView showAirportEntryPage() {
@@ -69,5 +75,7 @@ public class FlightManagementController {
 		mv.addObject("airport", airport);
 		return mv;
 	}
+	
+
 }
 

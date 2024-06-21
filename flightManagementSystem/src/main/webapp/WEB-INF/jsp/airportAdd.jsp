@@ -8,23 +8,39 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-body {
-  background-color: skyblue;
-}
+ body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.shutterstock.com/image-vector/vector-3d-illustration-airplane-clouds-600nw-2143367099.jpg'); /* Path to your background image */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            height: 100vh; /* Ensure body takes full height */
+            margin: 0; /* Remove default margin */
+        }
 </style>
 </head>
 <body>
 <div align="center" >
-<h2>
+<h3>
  <form:form id="airportForm" action="/airport" method="post" modelAttribute="airport_data">
-  Enter Airport City:<form:input path="airportLocation"/>
-  <br><br>
-  Enter Airport Code:<form:input path="airportCode"/>
-  <br><br>         
+ <table>
+ <tr>
+ <td>
+  Enter Airport City:  </td>
+  <td> <form:input path="airportLocation"/> </td>
+  </tr>
+   </br></br>
+ <tr>
+ <td>
+  Enter Airport Code:  </td>
+  <td>  <form:input path="airportCode"/>  </td>
+</tr>
+</table>        
   <button type ="submit">Submit</button>
     <button type ="reset">Reset</button> 
 </form:form>
-</h2>
+</h3>
+<a href="i">Back to Home</a>
 </div>
 </body>
 </html>

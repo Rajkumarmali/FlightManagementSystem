@@ -8,8 +8,10 @@ public class Flight {
     @Id
     private Long flight_number;
     private String carrier_name;
-    private int seat_capacity;
-    
+    private Integer seat_capacity;
+    private Long routeId;
+    private String arrival;
+    private String departure;
     
 	public Long getFlight_number() {
 		return flight_number;
