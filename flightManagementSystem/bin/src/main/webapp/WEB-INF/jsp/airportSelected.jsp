@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,31 +19,21 @@
         }
 </style>
 </head>
-<<<<<<< HEAD
 <body>
-=======
-<body vlink="yellow" link="yellow" alink="red">
-
->>>>>>> 49675fb (first)
-<div align ="center">
-<h1>
-<u><i>All Airports</i></u>
-</h1>
-<table border="1">
-            <tr>
-                <th>Airport Code</th>
-                <th>Airport Location</th>
-            </tr>
-            <c:forEach items="${airportList}" var="airport" >
-			<tr>
-                <td>${airport.airportCode}</td>
-                <td>${airport.airportLocation}</td>
-                
-            </tr>
+<div align="center" >
+<h2>
+<form action="/airport-select" method="post">
+ Select Airport Code : <input list="allCodes" name ="airport-code" id = "airport-code"/>
+<datalist id = "allCodes">
+<c:forEach items="${codeList}" var="aircode" >
+<option value = "${aircode}"/>
 </c:forEach>
-</table>
-<br><br><br>
+</datalist>
+<br/><br/>
+<button type = "submit">Submit</button>
+</h2>
 <a href="i">Back to Home</a>
 </div>
+</form>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,30 +19,27 @@
         }
 </style>
 </head>
-<<<<<<< HEAD
 <body>
-=======
-<body vlink="yellow" link="yellow" alink="red">
-
->>>>>>> 49675fb (first)
-<div align ="center">
-<h1>
-<u><i>All Airports</i></u>
-</h1>
-<table border="1">
-            <tr>
-                <th>Airport Code</th>
-                <th>Airport Location</th>
-            </tr>
-            <c:forEach items="${airportList}" var="airport" >
-			<tr>
-                <td>${airport.airportCode}</td>
-                <td>${airport.airportLocation}</td>
-                
-            </tr>
-</c:forEach>
-</table>
-<br><br><br>
+<div align="center" >
+<h3>
+ <form:form id="airportForm" action="/airport" method="post" modelAttribute="airport_data">
+ <table>
+ <tr>
+ <td>
+  Enter Airport City:  </td>
+  <td> <form:input path="airportLocation"/> </td>
+  </tr>
+   </br></br>
+ <tr>
+ <td>
+  Enter Airport Code:  </td>
+  <td>  <form:input path="airportCode"/>  </td>
+</tr>
+</table>        
+  <button type ="submit">Submit</button>
+    <button type ="reset">Reset</button> 
+</form:form>
+</h3>
 <a href="i">Back to Home</a>
 </div>
 </body>

@@ -44,7 +44,11 @@ public class LoginController {
 		return new ModelAndView("loginErrorPage");
 	}
 
+<<<<<<< HEAD
 	@GetMapping("/index")
+=======
+	@GetMapping("/index_")
+>>>>>>> 49675fb (first)
 	public ModelAndView showIndexPage() {
 		return new ModelAndView("index");
 	}

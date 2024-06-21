@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Airport Details</title>
 <style>
- body {
+body {
             font-family: Arial, sans-serif;
             background-image: url('https://www.shutterstock.com/image-vector/vector-3d-illustration-airplane-clouds-600nw-2143367099.jpg'); /* Path to your background image */
             background-size: cover; /* Cover the entire page */
@@ -17,32 +16,24 @@
             margin: 0; /* Remove default margin */
         }
 </style>
-</head>
-<<<<<<< HEAD
-<body>
-=======
-<body vlink="yellow" link="yellow" alink="red">
 
->>>>>>> 49675fb (first)
+</head>
+<body>
 <div align ="center">
-<h1>
-<u><i>All Airports</i></u>
-</h1>
-<table border="1">
-            <tr>
-                <th>Airport Code</th>
-                <th>Airport Location</th>
-            </tr>
-            <c:forEach items="${airportList}" var="airport" >
-			<tr>
-                <td>${airport.airportCode}</td>
-                <td>${airport.airportLocation}</td>
-                
-            </tr>
-</c:forEach>
-</table>
-<br><br><br>
-<a href="i">Back to Home</a>
-</div>
+ <i><h1>Airport Details</h1></i>
+    <table>
+        <tr>
+        <h1>
+            <td>Airport Code:</td>
+            <td>${airport.airportCode}</td>
+        </tr>
+        <tr>
+            <td>Airport Location:</td>
+            <td>${airport.airportLocation}</td>
+        </tr>
+        </h1>
+    </table>
+    <br/><br/>
+   <a href="i">Back to Home</a>
 </body>
 </html>

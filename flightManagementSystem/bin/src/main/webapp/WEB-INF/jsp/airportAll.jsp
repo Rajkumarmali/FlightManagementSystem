@@ -18,12 +18,7 @@
         }
 </style>
 </head>
-<<<<<<< HEAD
 <body>
-=======
-<body vlink="yellow" link="yellow" alink="red">
-
->>>>>>> 49675fb (first)
 <div align ="center">
 <h1>
 <u><i>All Airports</i></u>
